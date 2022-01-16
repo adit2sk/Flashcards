@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.header {
+    font-family: 'Roboto', sans-serif;
+    background-color: aqua;
+}
+
+
+.flex-container {
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 10px;
+}
+
+.card {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+/*
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front{
+    background: aqua;
+    z-index: 2;
+    backface-visibility: hidden;
+
+}
+
+.back{
+    background: lightblue;
+    backface-visibility: hidden;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.card{
+    perspective: 1000px;
+}
+*/
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+
+.card{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-family: 'Lobster', cursive;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.front{
+    background: linear-gradient(#08aeea, #2af598);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back{
+    background: linear-gradient(#f8da61, #ff5acd);
+    z-index: 1;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.card{
+    perspective: 1000px;
+}
